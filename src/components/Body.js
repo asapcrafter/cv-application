@@ -1,29 +1,33 @@
 import React, { Component } from 'react';
-import Form from './Form';
+
+function Info(i) {
+    return (
+        <div>
+            {props.info.i}
+        </div>
+    )
+}
 
 class Body extends Component {
 
-    state = {
-        name: '',
-        email: '',
-        phone: '',
-        school: '',
-        degree: '',
-        schoolDate: '',
-        company: '',
-        jobTitle: '',
-        jobRole: '',
-        workDateStart: '',
-        workDateEnd: '',
+    renderInfo(i) {
+        return (
+            Info(i)
+        )
     }
 
     render() {
         return (
             <div>
-                
+                <div className="personal-info">
+                    {this.renderInfo('name')}
+                </div>
+                <div className="education-info">
+                    Hello
+                </div>
             </div>
         );
     }
 }
 
-export default Body;
+export default Body
