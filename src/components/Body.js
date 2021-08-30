@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 function Info(i) {
     return (
         <div>
-            {props.info.i}
+
         </div>
     )
 }
