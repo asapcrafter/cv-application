@@ -20,10 +20,15 @@ class Form extends Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(this.state.name);
-    }
+    // handleSubmit = e => {
+    //     e.preventDefault();
+    //     this.setState({     
+    //     })
+    //     //Resets the form on submit
+    //     for (const key in this.state) {
+    //         this.setState({[key]: '',});
+    //     };
+    // }
 
     onChange = e => {
         const value = e.target.id;
@@ -118,6 +123,19 @@ class Form extends Component {
                         value="Submit" 
                     />
                 </form>
+                <div id="display">
+                    <Body props={this.state.name}/>
+                    <Body props={this.state.email}/>
+                    <Body props={this.state.phone}/>
+                    <Body props={this.state.school}/>
+                    {/* <Body props= />
+                    <Body props= />
+                    <Body props= />
+                    <Body props= />
+                    <Body props= />
+                    <Body props= />
+                    <Body props= /> */}
+                </div>
             </div>
         );
     }

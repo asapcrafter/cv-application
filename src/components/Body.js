@@ -1,33 +1,12 @@
 import React, { Component } from 'react';
 
-function Info(i) {
+const Body = (props) => {
+    const {prop} = props;
     return (
         <div>
-
+            {prop}       
         </div>
     )
-}
-
-class Body extends Component {
-
-    renderInfo(i) {
-        return (
-            Info(i)
-        )
-    }
-
-    render() {
-        return (
-            <div>
-                <div className="personal-info">
-                    {this.renderInfo('name')}
-                </div>
-                <div className="education-info">
-                    Hello
-                </div>
-            </div>
-        );
-    }
 }
 
 export default Body
